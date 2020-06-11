@@ -1,8 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+//2. Importing Team and Form Components
+import Team from "./Team"
+import Form from "./Form"
 
 function App() {
+//1. Created a Team Component that returns the list of team members
+const [team,setTeam] = useState([
+    {  
+      id:1,
+      name: "Karla Martinez",
+      email: "karlamartinez@gmail.com",
+      role: "FullStack Developer"
+    }])
+  // const TeamList = () => {
+  
+    
+  // ])}
+  // console.log(team);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +36,10 @@ function App() {
           Learn React
         </a>
       </header>
+      {/* //3. calling the Team and Form components */}
+      <Team member={team}/>
+      <Form />
+    
     </div>
   );
 }
