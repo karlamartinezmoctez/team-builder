@@ -15,7 +15,7 @@ const Form = (props) => {
         setPerson({title: e.target.value})
         console.log(person);
     }
-   //comment 
+ 
     return(
         //6. creating the form
         <form>
