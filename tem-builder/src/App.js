@@ -20,9 +20,9 @@ const [team,setTeam] = useState([
     const newPerson = {
         //Date.now() will set an id in using date/time in millisecond, creating a unique id
         id: Date.now(),
-        role: team.role,
-        name: team.name,
-        email: team.email,
+        role: e.role,
+        name: e.name,
+        email: e.email
     } 
     //this section of the function adds the object to the array of objects in the initial state
     setTeam([...team, newPerson])
@@ -33,7 +33,7 @@ const [team,setTeam] = useState([
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -43,11 +43,12 @@ const [team,setTeam] = useState([
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
       {/* //3. calling the Team and Form components */}
       <Team member={team}/>
-      <Form />
+      {/* 14. pass the function as a prop*/}
+      <Form addNewPerson = {addNewPerson}/>
     
     </div>
   );
