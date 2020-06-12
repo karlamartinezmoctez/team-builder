@@ -4,15 +4,18 @@ import React,{useState} from "react";
 
 const Form = (props) => {
     //9. creating a state
-    const [person, setPerson] = useState({
-        title: ''
-    })
+    const [person, setPerson] = useState([
+        {
+            title: ' '
+        }
+    ])
 
-    //10. onChange handler to control inputs
+    //11. onChange handler to control inputs
     const handleChanges = e =>{
         setPerson({title: e.target.value})
         console.log(person);
     }
+    
     return(
         //6. creating the form
         <form>
@@ -21,6 +24,8 @@ const Form = (props) => {
             {/* 8.creating input */}
             {/* 10. Add the onChange to the input*/}
             <input id="title" onChange = {handleChanges}/>
+            {/* 12. adding a button with the submit type */}
+            <button type="submit">Add name</button>
 
         </form>
     )

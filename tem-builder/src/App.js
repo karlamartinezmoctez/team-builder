@@ -14,11 +14,20 @@ const [team,setTeam] = useState([
       email: "karlamartinez@gmail.com",
       role: "FullStack Developer"
     }])
-  // const TeamList = () => {
-  
-    
-  // ])}
-  // console.log(team);
+ 
+  //13. creating a function that will handle adding a new person
+  const addNewPerson = e =>{
+    const newPerson = {
+        //Date.now() will set an id in using date/time in millisecond, creating a unique id
+        id: Date.now(),
+        role: team.role,
+        name: team.name,
+        email: team.email,
+    } 
+    //this section of the function adds the object to the array of objects in the initial state
+    setTeam([...team, newPerson])
+
+}
 
   return (
     <div className="App">
