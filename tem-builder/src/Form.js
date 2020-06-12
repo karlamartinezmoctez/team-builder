@@ -3,10 +3,12 @@
 import React,{useState} from "react";
 
 const Form = (props) => {
-    //9. creating a state
+    //9. creating a state with the same info from App
     const [person, setPerson] = useState([
         {
-            title: ' '
+            email: ' ',
+            name: ' ',
+            role: ' '
         }
     ])
 
@@ -34,13 +36,30 @@ const Form = (props) => {
         //17. add the onSubmit on the form  
         <form onSubmit = {submitForm}>
             {/* 7. Adding Labels */}
-            <label htmlFor="title">Role</label>
+            <label htmlFor="role">Role</label>
             {/* 8.creating input */}
             {/* 10. Add the onChange to the input*/}
-            <input id="title" onChange = {handleChanges}/>
+            <input 
+            id="role"
+            name="role"
+            value={person.role} 
+            type="text"
+            onChange = {handleChanges}/>
+            <label htmlFor="email">Email</label>
+            <input
+            id="email"
+            name="email"
+            value={person.email}
+            type="text"
+            onChange = {handleChanges}/>
             {/* 19. adding a new label and text area for the other input(person) */}
-            <label htmlFor="person"> Name </label>
-            <textarea id = "person" name="body" onChange={handleChanges}/>
+            <label htmlFor="name"> Name </label>
+            <textarea 
+            id="name" 
+            name="name"  
+            value={person.name} 
+            type="text"
+            onChange={handleChanges}/>
             {/* 12. adding a button with the submit type */}
             <button type="submit">Add Team Member</button>
 

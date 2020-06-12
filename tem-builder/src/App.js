@@ -31,8 +31,8 @@ const [team,setTeam] = useState([
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -44,11 +44,11 @@ const [team,setTeam] = useState([
         >
           Learn React
         </a> */}
-      </header>
+      {/* </header> */}
       {/* //3. calling the Team and Form components */}
       <Team member={team}/>
       {/* 14. pass the function as a prop*/}
-      <Form addNewPerson = {addNewPerson}/>
+      <Form addNewPerson={addNewPerson}/>
     
     </div>
   );
